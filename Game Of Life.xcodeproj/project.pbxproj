@@ -13,6 +13,10 @@
 		5D51366924ECC47600A997CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D51366824ECC47600A997CD /* Assets.xcassets */; };
 		5D51366C24ECC47600A997CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D51366B24ECC47600A997CD /* Preview Assets.xcassets */; };
 		5D51366F24ECC47600A997CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D51366D24ECC47600A997CD /* LaunchScreen.storyboard */; };
+		5D51367A24ECCC9C00A997CD /* CACell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51367924ECCC9C00A997CD /* CACell.swift */; };
+		5D51367C24ECCFC700A997CD /* RuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51367B24ECCFC700A997CD /* RuleSet.swift */; };
+		5D51367E24ECD31C00A997CD /* RuleSetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51367D24ECD31C00A997CD /* RuleSetProtocol.swift */; };
+		5D51368024ECD89000A997CD /* CASquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51367F24ECD89000A997CD /* CASquare.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		5D51366B24ECC47600A997CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5D51366E24ECC47600A997CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D51367024ECC47600A997CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D51367924ECCC9C00A997CD /* CACell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CACell.swift; sourceTree = "<group>"; };
+		5D51367B24ECCFC700A997CD /* RuleSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleSet.swift; sourceTree = "<group>"; };
+		5D51367D24ECD31C00A997CD /* RuleSetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleSetProtocol.swift; sourceTree = "<group>"; };
+		5D51367F24ECD89000A997CD /* CASquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CASquare.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		5D51366124ECC47400A997CD /* Game Of Life */ = {
 			isa = PBXGroup;
 			children = (
+				5D51367824ECCC1C00A997CD /* Models */,
 				5D51367724ECC56200A997CD /* Views */,
 				5D51366824ECC47600A997CD /* Assets.xcassets */,
 				5D51367624ECC51A00A997CD /* App Lifecycle */,
@@ -89,6 +98,17 @@
 				5D51366624ECC47400A997CD /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5D51367824ECCC1C00A997CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5D51367924ECCC9C00A997CD /* CACell.swift */,
+				5D51367B24ECCFC700A997CD /* RuleSet.swift */,
+				5D51367D24ECD31C00A997CD /* RuleSetProtocol.swift */,
+				5D51367F24ECD89000A997CD /* CASquare.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,7 +184,11 @@
 			files = (
 				5D51366324ECC47400A997CD /* AppDelegate.swift in Sources */,
 				5D51366524ECC47400A997CD /* SceneDelegate.swift in Sources */,
+				5D51368024ECD89000A997CD /* CASquare.swift in Sources */,
 				5D51366724ECC47400A997CD /* ContentView.swift in Sources */,
+				5D51367A24ECCC9C00A997CD /* CACell.swift in Sources */,
+				5D51367E24ECD31C00A997CD /* RuleSetProtocol.swift in Sources */,
+				5D51367C24ECCFC700A997CD /* RuleSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
