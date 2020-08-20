@@ -10,8 +10,8 @@ import Foundation
 
 // Defines the very basic Celluar Automoton cell
 
-class CACell {
-    private var alive: Bool = false
+class CACell: ObservableObject {
+    @Published private(set) var alive: Bool = false
     private var willLiveNextGen: Bool = false
     var isAlive: Bool {
         return alive
@@ -41,5 +41,9 @@ class CACell {
     
     func revive() {
         self.alive = true
+    }
+    
+    func toggle() {
+        self.alive.toggle()
     }
 }

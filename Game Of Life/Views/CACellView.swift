@@ -9,19 +9,24 @@
 import SwiftUI
 
 struct CACellView: View {
-    @Binding var cell: CACell
+    @ObservedObject var cell: CACell
     
     var body: some View {
+        let imgName: String
         if cell.isAlive {
-            return Image(systemName: "square.fill")
+            imgName = "square.fill"
         } else {
-            return Image(systemName: "square")
+            imgName = "square"
+        }
+        return Image(systemName: imgName)
+            .onTapGesture {
+                self.cell.toggle()
         }
     }
 }
 
 struct CACellView_Previews: PreviewProvider {
     static var previews: some View {
-        CACellView(cell: Binding.constant(CACell()))
+        CACellView(cell: CACell())
     }
 }

@@ -9,11 +9,17 @@
 import SwiftUI
 
 struct GridView: View {
-    @State var grid = CAGrid(dimensions: 5)
+    @State var grid = CAGrid(dimensions: 25)
     
     var body: some View {
         VStack {
-            CACellView(cell: $grid.grid[0])
+            ForEach(0..<grid.dimensions, id: \.self) { i in
+                HStack {
+                    ForEach(0..<self.grid.dimensions, id: \.self) { j in
+                        CACellView(cell: self.grid.grid[i * self.grid.dimensions + j])
+                    }
+                }
+            }
         }
     }
 }
