@@ -21,7 +21,7 @@ class CACell {
         return willLiveNextGen
     }
     var rules: RuleSetProtocol = RuleSet.shared
-    var norhtNeighbor: CACell?
+    var northNeighbor: CACell?
     var northEastNeighbor: CACell?
     var eastNeighbor: CACell?
     var southEastNeighbor: CACell?

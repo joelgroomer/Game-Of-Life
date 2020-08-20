@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
         TabView {
             
-            Text("Hello, World!")
+            GridView()
             .tabItem {
                 Image(systemName: "square.grid.2x2")
                 Text("Simulation")

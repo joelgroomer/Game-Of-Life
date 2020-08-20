@@ -17,7 +17,7 @@ class RuleSet: RuleSetProtocol {
     // If a cell is dead and it has exactly 3 neighbors, it comes to life
     
     func testCell(_ cell: CACell) -> Bool {
-        let count = countNeighbors(n: cell.norhtNeighbor,
+        let count = countNeighbors(n: cell.northNeighbor,
                                    ne: cell.northEastNeighbor,
                                    e: cell.eastNeighbor,
                                    se: cell.southEastNeighbor,

@@ -17,6 +17,9 @@
 		5D51367C24ECCFC700A997CD /* RuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51367B24ECCFC700A997CD /* RuleSet.swift */; };
 		5D51367E24ECD31C00A997CD /* RuleSetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51367D24ECD31C00A997CD /* RuleSetProtocol.swift */; };
 		5D51368024ECD89000A997CD /* CASquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51367F24ECD89000A997CD /* CASquare.swift */; };
+		5D51368224ED024C00A997CD /* CAGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51368124ED024C00A997CD /* CAGrid.swift */; };
+		5D51368424ED111D00A997CD /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51368324ED111D00A997CD /* GridView.swift */; };
+		5D51368824ED147E00A997CD /* CACellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51368724ED147E00A997CD /* CACellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		5D51367B24ECCFC700A997CD /* RuleSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleSet.swift; sourceTree = "<group>"; };
 		5D51367D24ECD31C00A997CD /* RuleSetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleSetProtocol.swift; sourceTree = "<group>"; };
 		5D51367F24ECD89000A997CD /* CASquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CASquare.swift; sourceTree = "<group>"; };
+		5D51368124ED024C00A997CD /* CAGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGrid.swift; sourceTree = "<group>"; };
+		5D51368324ED111D00A997CD /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		5D51368724ED147E00A997CD /* CACellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CACellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				5D51366624ECC47400A997CD /* ContentView.swift */,
+				5D51368324ED111D00A997CD /* GridView.swift */,
+				5D51368724ED147E00A997CD /* CACellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -107,6 +115,7 @@
 				5D51367B24ECCFC700A997CD /* RuleSet.swift */,
 				5D51367D24ECD31C00A997CD /* RuleSetProtocol.swift */,
 				5D51367F24ECD89000A997CD /* CASquare.swift */,
+				5D51368124ED024C00A997CD /* CAGrid.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,12 +191,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D51368824ED147E00A997CD /* CACellView.swift in Sources */,
 				5D51366324ECC47400A997CD /* AppDelegate.swift in Sources */,
+				5D51368224ED024C00A997CD /* CAGrid.swift in Sources */,
 				5D51366524ECC47400A997CD /* SceneDelegate.swift in Sources */,
 				5D51368024ECD89000A997CD /* CASquare.swift in Sources */,
 				5D51366724ECC47400A997CD /* ContentView.swift in Sources */,
 				5D51367A24ECCC9C00A997CD /* CACell.swift in Sources */,
 				5D51367E24ECD31C00A997CD /* RuleSetProtocol.swift in Sources */,
+				5D51368424ED111D00A997CD /* GridView.swift in Sources */,
 				5D51367C24ECCFC700A997CD /* RuleSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
