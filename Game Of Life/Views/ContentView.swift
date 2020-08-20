@@ -18,19 +18,21 @@ struct ContentView: View {
         HStack {
             ZStack {
                 Color(.lightGray)
-                GridView()
-                    .padding()
-                    .scaleEffect(gridScaleFinal + gridScaleCurrent)
-                    .gesture(
-                        MagnificationGesture()
-                            .onChanged { amount in
-                                self.gridScaleCurrent = amount - 1
-                            }
-                            .onEnded { amount in
-                                self.gridScaleFinal += self.gridScaleCurrent
-                                self.gridScaleCurrent = 0
-                            }
-                    )
+                
+                    GridView()
+                        .padding()
+                        .scaleEffect(gridScaleFinal + gridScaleCurrent)
+                        .gesture(
+                            MagnificationGesture()
+                                .onChanged { amount in
+                                    self.gridScaleCurrent = amount - 1
+                                }
+                                .onEnded { amount in
+                                    self.gridScaleFinal += self.gridScaleCurrent
+                                    self.gridScaleCurrent = 0
+                                }
+                        )
+                
             }
             
             ZStack {
