@@ -15,37 +15,45 @@ struct ContentView: View {
     
     var body: some View {
         
-        HStack {
-            ZStack {
-                Color(.lightGray)
-                
-                    GridView()
-                        .padding()
-                        .scaleEffect(gridScaleFinal + gridScaleCurrent)
-                        .gesture(
-                            MagnificationGesture()
-                                .onChanged { amount in
-                                    self.gridScaleCurrent = amount - 1
-                                }
-                                .onEnded { amount in
-                                    self.gridScaleFinal += self.gridScaleCurrent
-                                    self.gridScaleCurrent = 0
-                                }
-                        )
-                
-            }
-            
-            ZStack {
-                Color(.systemBlue)
-                VStack {
-                    Picker(selection: $selectedSeg,
-                           label: Text("menu")) {
-                            Text("Options").tag(0)
-                            Text("Rules").tag(1)
-                    }.pickerStyle(SegmentedPickerStyle())
-                    Text("Selection: \(selectedSeg)")
-                    Spacer()
+        GeometryReader { geo in
+            HStack {
+                ZStack {
+                    Color(.lightGray)
+                    
+                        GridView()
+                            .padding()
+                            .scaleEffect(gridScaleFinal + gridScaleCurrent)
+                            .gesture(
+                                MagnificationGesture()
+                                    .onChanged { amount in
+                                        self.gridScaleCurrent = amount - 1
+                                    }
+                                    .onEnded { amount in
+                                        self.gridScaleFinal += self.gridScaleCurrent
+                                        self.gridScaleCurrent = 0
+                                    }
+                            )
+                    
                 }
+                
+                ZStack {
+                    Color(.systemBlue)
+                    VStack {
+                        Picker(selection: $selectedSeg,
+                               label: Text("menu")) {
+                                Text("Options").tag(0)
+                                Text("Rules").tag(1)
+                        }.pickerStyle(SegmentedPickerStyle())
+                        Spacer()
+                        if selectedSeg == 0 {
+                            Text("Options")
+                        } else {
+                            RulesView()
+                        }
+                        Spacer()
+                    }
+                }
+                .frame(width: geo.size.width / 3, height: geo.size.height)
             }
         }
     }
