@@ -36,7 +36,9 @@ class CACell: ObservableObject {
     
     func generate() {
         // decides if this cell will live or die in the next generation
-        self.willLiveNextGen = rules.testCell(self)
+        DispatchQueue.global().async {
+            self.willLiveNextGen = self.rules.testCell(self)
+        }
     }
     
     func updateGen() {

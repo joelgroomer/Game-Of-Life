@@ -42,13 +42,13 @@ class RuleSet: RuleSetProtocol {
         var count = 0
         
         if n != nil && n!.isAlive { count += 1 }
-        if ne != nil && n!.isAlive { count += 1 }
-        if e != nil && n!.isAlive { count += 1 }
-        if se != nil && n!.isAlive { count += 1 }
-        if s != nil && n!.isAlive { count += 1 }
-        if sw != nil && n!.isAlive { count += 1 }
-        if w != nil && n!.isAlive { count += 1 }
-        if nw != nil && n!.isAlive { count += 1 }
+        if ne != nil && ne!.isAlive { count += 1 }
+        if e != nil && e!.isAlive { count += 1 }
+        if se != nil && se!.isAlive { count += 1 }
+        if s != nil && s!.isAlive { count += 1 }
+        if sw != nil && sw!.isAlive { count += 1 }
+        if w != nil && w!.isAlive { count += 1 }
+        if nw != nil && nw!.isAlive { count += 1 }
         
         return count
     }

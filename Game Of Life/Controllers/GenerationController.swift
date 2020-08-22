@@ -14,23 +14,29 @@ class GenerationController: ObservableObject {
     @Published var generation: Int = 0
     
     @Published var running: Bool = false { didSet {
-        if running == true {
-            self.timer = Timer.scheduledTimer(timeInterval: speed, target: self, selector: #selector(pinged), userInfo: nil, repeats: true)
+        if running {
+            timer = Timer.scheduledTimer(timeInterval: speed, target: self, selector: #selector(pinged), userInfo: nil, repeats: true)
         } else {
-            self.timer?.invalidate()
+            timer?.invalidate()
         }
     }}
     
     var speed: TimeInterval = 1.0 { didSet {
         if running == true {
-            self.timer?.invalidate()
-            self.timer = Timer.scheduledTimer(timeInterval: speed, target: self, selector: #selector(pinged), userInfo: nil, repeats: true)
+            timer?.invalidate()
+            timer = Timer.scheduledTimer(timeInterval: speed, target: self, selector: #selector(pinged), userInfo: nil, repeats: true)
         }
     }}
     
 
     @objc func pinged() {
         generation += 1
+        print(generation)
+    }
+    
+    func startStop() {
+        running = !running
+        print(running)
     }
 
 }
