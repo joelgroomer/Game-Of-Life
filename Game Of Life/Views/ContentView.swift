@@ -20,7 +20,7 @@ struct ContentView: View {
                 ZStack {
                     Color(.lightGray)
                     
-                        GridView()
+                        GridDisplayView()
                             .padding()
                             .scaleEffect(gridScaleFinal + gridScaleCurrent)
                             .gesture(
