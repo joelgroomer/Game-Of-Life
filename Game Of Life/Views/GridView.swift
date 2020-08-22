@@ -14,6 +14,7 @@ struct GridView: View {
 //    @State private var offsetY: CGFloat = .zero
     @State private var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 25)
     @State private var scale: CGFloat = 0.5
+    @EnvironmentObject private var gen: GenerationController
     
     var body: some View {
         VStack {
@@ -40,6 +41,7 @@ struct GridView: View {
                             scale = value.magnitude
                         })
             }
+            Text("Generation: \(gen.generation)")
             Text("Grid size: \(grid.dimensions) x \(grid.dimensions)")
         }
     }

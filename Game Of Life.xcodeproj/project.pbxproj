@@ -21,6 +21,7 @@
 		5D51368424ED111D00A997CD /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51368324ED111D00A997CD /* GridView.swift */; };
 		5D51368824ED147E00A997CD /* CACellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51368724ED147E00A997CD /* CACellView.swift */; };
 		5D94EEFF24EF7034007805D1 /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D94EEFE24EF7034007805D1 /* RulesView.swift */; };
+		5D94EF0224F09F9A007805D1 /* GenerationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D94EF0124F09F9A007805D1 /* GenerationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		5D51368324ED111D00A997CD /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		5D51368724ED147E00A997CD /* CACellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CACellView.swift; sourceTree = "<group>"; };
 		5D94EEFE24EF7034007805D1 /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
+		5D94EF0124F09F9A007805D1 /* GenerationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		5D51366124ECC47400A997CD /* Game Of Life */ = {
 			isa = PBXGroup;
 			children = (
+				5D94EF0024F09F66007805D1 /* Controllers */,
 				5D51367824ECCC1C00A997CD /* Models */,
 				5D51367724ECC56200A997CD /* Views */,
 				5D51366824ECC47600A997CD /* Assets.xcassets */,
@@ -121,6 +124,14 @@
 				5D51368124ED024C00A997CD /* CAGrid.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5D94EF0024F09F66007805D1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5D94EF0124F09F9A007805D1 /* GenerationController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D51368824ED147E00A997CD /* CACellView.swift in Sources */,
+				5D94EF0224F09F9A007805D1 /* GenerationController.swift in Sources */,
 				5D51366324ECC47400A997CD /* AppDelegate.swift in Sources */,
 				5D51368224ED024C00A997CD /* CAGrid.swift in Sources */,
 				5D51366524ECC47400A997CD /* SceneDelegate.swift in Sources */,

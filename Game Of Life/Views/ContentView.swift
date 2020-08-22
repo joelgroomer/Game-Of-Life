@@ -11,7 +11,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var selectedSeg = 0
     @State private var gridScaleCurrent: CGFloat = 0
-    @State private var gridScaleFinal: CGFloat = 1
+    @State private var gridScaleFinal: CGFloat = 1    
     
     var body: some View {
         

@@ -12,14 +12,18 @@ import Foundation
 
 class CACell: ObservableObject {
     @Published private(set) var alive: Bool = false
-    private var willLiveNextGen: Bool = false
+    private var willLiveNextGen: Bool?
     var isAlive: Bool {
         return alive
     }
     var willLive: Bool {
-        generate()
-        return willLiveNextGen
+        if willLiveNextGen != nil {
+            return willLiveNextGen!
+        } else {
+            return false
+        }
     }
+
     var rules: RuleSetProtocol = RuleSet.shared
     var northNeighbor: CACell?
     var northEastNeighbor: CACell?
@@ -35,14 +39,17 @@ class CACell: ObservableObject {
         self.willLiveNextGen = rules.testCell(self)
     }
     
-    func kill() {
-        self.alive = false
+    func updateGen() {
+        // applies the decision made by the generate() method
+        if let willLiveNextGen = self.willLiveNextGen {
+            alive = willLiveNextGen
+            self.willLiveNextGen = nil
+        } else {
+            generate()
+            updateGen()
+        }
     }
-    
-    func revive() {
-        self.alive = true
-    }
-    
+       
     func toggle() {
         self.alive.toggle()
     }

@@ -10,8 +10,13 @@ import SwiftUI
 
 struct CACellView: View {
     @ObservedObject var cell: CACell
+    @EnvironmentObject var gen: GenerationController
     
     var body: some View {
+        if gen.generation > 0 {
+            cell.updateGen()
+        }
+        
         let imgName: String
         if cell.isAlive {
             imgName = "square.fill"
