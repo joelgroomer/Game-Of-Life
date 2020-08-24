@@ -100,11 +100,11 @@
 		5D51367724ECC56200A997CD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5D94EF0924F0D08E007805D1 /* CellView.swift */,
 				5D51366624ECC47400A997CD /* ContentView.swift */,
 				5D51368324ED111D00A997CD /* GridDisplayView.swift */,
 				5D94EF0524F0CE94007805D1 /* GridView.swift */,
 				5D94EEFE24EF7034007805D1 /* RulesView.swift */,
-				5D94EF0924F0D08E007805D1 /* CellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
