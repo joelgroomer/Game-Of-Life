@@ -13,13 +13,12 @@
 		5D51366924ECC47600A997CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D51366824ECC47600A997CD /* Assets.xcassets */; };
 		5D51366C24ECC47600A997CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D51366B24ECC47600A997CD /* Preview Assets.xcassets */; };
 		5D51366F24ECC47600A997CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D51366D24ECC47600A997CD /* LaunchScreen.storyboard */; };
-		5D51367A24ECCC9C00A997CD /* CACell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51367924ECCC9C00A997CD /* CACell.swift */; };
-		5D51367C24ECCFC700A997CD /* RuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51367B24ECCFC700A997CD /* RuleSet.swift */; };
-		5D51367E24ECD31C00A997CD /* RuleSetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51367D24ECD31C00A997CD /* RuleSetProtocol.swift */; };
-		5D51368024ECD89000A997CD /* CASquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51367F24ECD89000A997CD /* CASquare.swift */; };
-		5D51368224ED024C00A997CD /* CAGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51368124ED024C00A997CD /* CAGrid.swift */; };
-		5D51368424ED111D00A997CD /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51368324ED111D00A997CD /* GridView.swift */; };
-		5D51368824ED147E00A997CD /* CACellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51368724ED147E00A997CD /* CACellView.swift */; };
+		5D51368424ED111D00A997CD /* GridDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51368324ED111D00A997CD /* GridDisplayView.swift */; };
+		5D94EEFF24EF7034007805D1 /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D94EEFE24EF7034007805D1 /* RulesView.swift */; };
+		5D94EF0224F09F9A007805D1 /* GenerationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D94EF0124F09F9A007805D1 /* GenerationController.swift */; };
+		5D94EF0424F0C382007805D1 /* CAGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D94EF0324F0C382007805D1 /* CAGrid.swift */; };
+		5D94EF0624F0CE94007805D1 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D94EF0524F0CE94007805D1 /* GridView.swift */; };
+		5D94EF0A24F0D08E007805D1 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D94EF0924F0D08E007805D1 /* CellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,13 +30,12 @@
 		5D51366B24ECC47600A997CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5D51366E24ECC47600A997CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D51367024ECC47600A997CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D51367924ECCC9C00A997CD /* CACell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CACell.swift; sourceTree = "<group>"; };
-		5D51367B24ECCFC700A997CD /* RuleSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleSet.swift; sourceTree = "<group>"; };
-		5D51367D24ECD31C00A997CD /* RuleSetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleSetProtocol.swift; sourceTree = "<group>"; };
-		5D51367F24ECD89000A997CD /* CASquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CASquare.swift; sourceTree = "<group>"; };
-		5D51368124ED024C00A997CD /* CAGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGrid.swift; sourceTree = "<group>"; };
-		5D51368324ED111D00A997CD /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
-		5D51368724ED147E00A997CD /* CACellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CACellView.swift; sourceTree = "<group>"; };
+		5D51368324ED111D00A997CD /* GridDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridDisplayView.swift; sourceTree = "<group>"; };
+		5D94EEFE24EF7034007805D1 /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
+		5D94EF0124F09F9A007805D1 /* GenerationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationController.swift; sourceTree = "<group>"; };
+		5D94EF0324F0C382007805D1 /* CAGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGrid.swift; sourceTree = "<group>"; };
+		5D94EF0524F0CE94007805D1 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		5D94EF0924F0D08E007805D1 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +68,7 @@
 		5D51366124ECC47400A997CD /* Game Of Life */ = {
 			isa = PBXGroup;
 			children = (
+				5D94EF0024F09F66007805D1 /* Controllers */,
 				5D51367824ECCC1C00A997CD /* Models */,
 				5D51367724ECC56200A997CD /* Views */,
 				5D51366824ECC47600A997CD /* Assets.xcassets */,
@@ -101,9 +100,11 @@
 		5D51367724ECC56200A997CD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5D94EF0924F0D08E007805D1 /* CellView.swift */,
 				5D51366624ECC47400A997CD /* ContentView.swift */,
-				5D51368324ED111D00A997CD /* GridView.swift */,
-				5D51368724ED147E00A997CD /* CACellView.swift */,
+				5D51368324ED111D00A997CD /* GridDisplayView.swift */,
+				5D94EF0524F0CE94007805D1 /* GridView.swift */,
+				5D94EEFE24EF7034007805D1 /* RulesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -111,13 +112,17 @@
 		5D51367824ECCC1C00A997CD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5D51367924ECCC9C00A997CD /* CACell.swift */,
-				5D51367B24ECCFC700A997CD /* RuleSet.swift */,
-				5D51367D24ECD31C00A997CD /* RuleSetProtocol.swift */,
-				5D51367F24ECD89000A997CD /* CASquare.swift */,
-				5D51368124ED024C00A997CD /* CAGrid.swift */,
+				5D94EF0324F0C382007805D1 /* CAGrid.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5D94EF0024F09F66007805D1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5D94EF0124F09F9A007805D1 /* GenerationController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,16 +196,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D51368824ED147E00A997CD /* CACellView.swift in Sources */,
+				5D94EF0224F09F9A007805D1 /* GenerationController.swift in Sources */,
 				5D51366324ECC47400A997CD /* AppDelegate.swift in Sources */,
-				5D51368224ED024C00A997CD /* CAGrid.swift in Sources */,
+				5D94EF0624F0CE94007805D1 /* GridView.swift in Sources */,
 				5D51366524ECC47400A997CD /* SceneDelegate.swift in Sources */,
-				5D51368024ECD89000A997CD /* CASquare.swift in Sources */,
+				5D94EEFF24EF7034007805D1 /* RulesView.swift in Sources */,
+				5D94EF0424F0C382007805D1 /* CAGrid.swift in Sources */,
 				5D51366724ECC47400A997CD /* ContentView.swift in Sources */,
-				5D51367A24ECCC9C00A997CD /* CACell.swift in Sources */,
-				5D51367E24ECD31C00A997CD /* RuleSetProtocol.swift in Sources */,
-				5D51368424ED111D00A997CD /* GridView.swift in Sources */,
-				5D51367C24ECCFC700A997CD /* RuleSet.swift in Sources */,
+				5D51368424ED111D00A997CD /* GridDisplayView.swift in Sources */,
+				5D94EF0A24F0D08E007805D1 /* CellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -322,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
