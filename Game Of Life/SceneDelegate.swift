@@ -21,8 +21,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         let gen = GenerationController()
+        let cagrid = CAGrid(dim: 25)
         let contentView = ContentView()
             .environmentObject(gen)
+            .environmentObject(cagrid)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

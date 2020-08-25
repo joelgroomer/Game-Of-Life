@@ -10,6 +10,7 @@ import SwiftUI
 
 struct GridDisplayView: View {
     @EnvironmentObject private var gen: GenerationController
+    @EnvironmentObject private var cagrid: CAGrid
 //    @State private var offsetX: CGFloat = .zero
 //    @State private var offsetY: CGFloat = .zero
     
@@ -21,7 +22,6 @@ struct GridDisplayView: View {
             gen.speed = 5.0
         }
     }}
-    @State var grid = CAGrid(dim: 25)
     
     var body: some View {
         VStack {
@@ -33,7 +33,7 @@ struct GridDisplayView: View {
             .padding()
             
             ScrollView([.horizontal, .vertical], showsIndicators: true) {
-                GridView(grid: $grid)
+                GridView()
                 .scaleEffect(scale * 2)
                 .highPriorityGesture(
                     MagnificationGesture()
@@ -46,12 +46,12 @@ struct GridDisplayView: View {
                     .foregroundColor(.blue)
                     .onTapGesture {
                         gen.reset()
-                        grid.reset()
+                        cagrid.reset()
                     }
                     .font(.title)
                 VStack {
                     Text("Generation: \(gen.generation)")
-                    Text("Grid size: \(grid.dim) x \(grid.dim)")
+                    Text("Grid size: \(cagrid.dim) x \(cagrid.dim)")
                 }
                 .padding()
                 Image(systemName: gen.running ? "stop.fill" : "play.fill")

@@ -8,9 +8,9 @@
 
 import Foundation
 
-class CAGrid {
-    var dim: Int
-    var grid: [Bool]
+class CAGrid: ObservableObject {
+    @Published var dim: Int
+    @Published var grid: [Bool]
     var buffer: [Bool]
     let alive = "square.fill"
     let dead = "square"
@@ -27,6 +27,11 @@ class CAGrid {
         }
     }
     
+    func changeDim(_ val: Int) {
+        dim = val
+        reset()
+    }
+    
     func reset() {
         grid = Array(repeating: false, count: dim * dim)
         buffer = Array(repeating: false, count: dim * dim)
@@ -35,6 +40,7 @@ class CAGrid {
     func setCell(index: Int, value: Bool) {
         guard index < grid.count else { return }
         grid[index] = value
+        self.objectWillChange.send()
     }
     
     func prepNextGen(completion: @escaping () -> Void) {

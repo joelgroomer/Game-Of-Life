@@ -9,23 +9,22 @@
 import SwiftUI
 
 struct CellView: View {
-
+    @EnvironmentObject var cagrid: CAGrid
     @State var alive: Bool
-    @Binding var grid: CAGrid
     @State var index: Int
     
     var body: some View {
 
-        if $alive.wrappedValue {
-            Image(systemName: grid.alive)
+        if cagrid.grid[index] {
+            Image(systemName: cagrid.alive)
                 .onTapGesture {
-                    grid.setCell(index: index, value: false)
+                    cagrid.setCell(index: index, value: false)
                     $alive.wrappedValue.toggle()
                 }
         } else {
-            Image(systemName: grid.dead)
+            Image(systemName: cagrid.dead)
                 .onTapGesture {
-                    grid.setCell(index: index, value: true)
+                    cagrid.setCell(index: index, value: true)
                     $alive.wrappedValue.toggle()
                 }
         }
@@ -34,6 +33,6 @@ struct CellView: View {
 
 struct CellView_Previews: PreviewProvider {
     static var previews: some View {
-        CellView(alive: false, grid: .constant(CAGrid(dim: 25)), index: 1)
+        CellView(alive: false, index: 1)
     }
 }
