@@ -14,11 +14,17 @@ class CAGrid {
     var buffer: [Bool]
     let alive = "square.fill"
     let dead = "square"
+    let center = NotificationCenter.default
     
     init(dim: Int) {
         self.dim = dim
         grid = Array(repeating: false, count: dim * dim)
         buffer = Array(repeating: false, count: dim * dim)
+        center.addObserver(forName: Notification.Name(rawValue: "generation"), object: nil, queue: .main) { _ in
+            self.prepNextGen {
+                self.implementNextGen()
+            }
+        }
     }
     
     func reset() {

@@ -31,6 +31,7 @@ class GenerationController: ObservableObject {
 
     @objc func pinged() {
         generation += 1
+        NotificationCenter.default.post(Notification(name: (NSString("generation")) as Notification.Name))
     }
     
     func startStop() {
