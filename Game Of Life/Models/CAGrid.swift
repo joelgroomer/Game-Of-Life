@@ -21,6 +21,16 @@ class CAGrid {
         buffer = Array(repeating: false, count: dim * dim)
     }
     
+    func reset() {
+        grid = Array(repeating: false, count: dim * dim)
+        buffer = Array(repeating: false, count: dim * dim)
+    }
+    
+    func setCell(index: Int, value: Bool) {
+        guard index < grid.count else { return }
+        grid[index] = value
+    }
+    
     func prepNextGen(completion: @escaping () -> Void) {
         // test the rules against each cell to determine if it will live or die
         DispatchQueue.global().async { [self] in

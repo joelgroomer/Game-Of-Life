@@ -13,19 +13,14 @@ struct GridView: View {
     @Binding var grid: CAGrid
     
     var body: some View {
-        VStack() {
             
-            ForEach(0..<grid.dim, id: \.self) { i in
-                HStack {
-                    ForEach(0..<self.grid.dim) { j in
-                        CellView(alive: grid.grid[i * grid.dim + j], grid: $grid)
-                            .id(UUID())
-                            .padding(0)
-                    }
-                }
+        LazyVGrid(columns: columns) {
+            ForEach(0..<grid.dim * grid.dim, id: \.self) { i in
+                CellView(alive: grid.grid[i], grid: $grid, index: i)
+                    .padding(0)
             }
-            .padding(1)
         }
+        .padding()
     }
 }
 

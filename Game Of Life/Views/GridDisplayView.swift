@@ -41,18 +41,33 @@ struct GridDisplayView: View {
                             scale = value.magnitude
                         })
             }
-            Text("Generation: \(gen.generation)")
-            Text("Grid size: \(grid.dim) x \(grid.dim)")
+            HStack {
+                Image(systemName: "xmark.circle")
+                    .foregroundColor(.blue)
+                    .onTapGesture {
+                        gen.reset()
+                        grid.reset()
+                    }
+                    .font(.title)
+                VStack {
+                    Text("Generation: \(gen.generation)")
+                    Text("Grid size: \(grid.dim) x \(grid.dim)")
+                }
+                .padding()
+                Image(systemName: gen.running ? "stop.fill" : "play.fill")
+                    .foregroundColor(.blue)
+                    .onTapGesture {
+                        gen.startStop()
+                    }
+                    .font(.title)
+            }
             Spacer()
             HStack {
+                
                 Image(systemName: "tortoise")
                 Slider(value: $speed)
                 Image(systemName: "hare")
-                Image(systemName: gen.running ? "stop.fill" : "play.fill")
-                    .onTapGesture {
-                        print("tapped")
-                        gen.startStop()
-                    }
+                
             }
             .padding()
         }

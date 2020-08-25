@@ -31,12 +31,17 @@ class GenerationController: ObservableObject {
 
     @objc func pinged() {
         generation += 1
-        print(generation)
     }
     
     func startStop() {
         running = !running
-        print(running)
+    }
+    
+    func reset() {
+        if running {
+            startStop()
+        }
+        generation = 0
     }
 
 }

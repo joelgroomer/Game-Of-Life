@@ -10,30 +10,22 @@ import SwiftUI
 
 struct CellView: View {
 
-    @State var alive: Bool = false
+    @State var alive: Bool
     @Binding var grid: CAGrid
-//    @State var index: Int
+    @State var index: Int
     
     var body: some View {
-//        if grid.grid[index] == true {
-//            Image(systemName: grid.alive)
-//                .onTapGesture {
-//                    grid.grid[index].toggle()
-//                }
-//        } else {
-//            Image(systemName: grid.dead)
-//                .onTapGesture {
-//                    grid.grid[index].toggle()
-//                }
-//        }
+
         if $alive.wrappedValue {
             Image(systemName: grid.alive)
                 .onTapGesture {
+                    grid.setCell(index: index, value: false)
                     $alive.wrappedValue.toggle()
                 }
         } else {
             Image(systemName: grid.dead)
                 .onTapGesture {
+                    grid.setCell(index: index, value: true)
                     $alive.wrappedValue.toggle()
                 }
         }
@@ -42,6 +34,6 @@ struct CellView: View {
 
 struct CellView_Previews: PreviewProvider {
     static var previews: some View {
-        CellView(alive: false, grid: .constant(CAGrid(dim: 25)))
+        CellView(alive: false, grid: .constant(CAGrid(dim: 25)), index: 1)
     }
 }
