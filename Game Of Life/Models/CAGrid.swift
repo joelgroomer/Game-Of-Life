@@ -69,7 +69,10 @@ class CAGrid {
     
     func implementNextGen() {
         DispatchQueue.main.async { [self] in
+            print("grid before: \(grid)")
+            print("buffer: \(buffer)")
             grid = buffer
+            print("grid after: \(grid)")
             buffer = Array(repeating: false, count: dim * dim)
         }
     }
