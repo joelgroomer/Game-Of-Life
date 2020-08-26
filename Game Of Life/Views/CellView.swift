@@ -14,19 +14,20 @@ struct CellView: View {
     @State var index: Int
     
     var body: some View {
+        let tap = TapGesture(count: 1)
+            .onEnded { _ in
+                cagrid.setCell(index: index, value: true)
+                $alive.wrappedValue.toggle()
+            }
 
-        if cagrid.grid[index] {
-            Image(systemName: cagrid.alive)
-                .onTapGesture {
-                    cagrid.setCell(index: index, value: false)
-                    $alive.wrappedValue.toggle()
-                }
+        if cagrid.shapeType == .system {
+            Image(systemName: cagrid.grid[index] ? cagrid.alive : cagrid.dead)
+                .gesture(tap)
+        } else if cagrid.shapeType == .asset {
+            Image(cagrid.grid[index] ? cagrid.alive : cagrid.dead)
+                .gesture(tap)
         } else {
-            Image(systemName: cagrid.dead)
-                .onTapGesture {
-                    cagrid.setCell(index: index, value: true)
-                    $alive.wrappedValue.toggle()
-                }
+            Text(cagrid.grid[index] ? cagrid.alive : cagrid.dead)
         }
     }
 }

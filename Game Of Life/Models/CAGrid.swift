@@ -12,8 +12,9 @@ class CAGrid: ObservableObject {
     @Published var dim: Int
     @Published var grid: [Bool]
     var buffer: [Bool]
-    let alive = "square.fill"
-    let dead = "square"
+    var alive = "square.fill"
+    var dead = "square"
+    var shapeType = ShapeType.system
     let center = NotificationCenter.default
     
     init(dim: Int) {

@@ -46,7 +46,7 @@ struct ContentView: View {
                         }.pickerStyle(SegmentedPickerStyle())
                         Spacer()
                         if selectedSeg == 0 {
-                            Text("Options")
+                            OptionsView()
                         } else {
                             RulesView()
                         }

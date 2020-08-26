@@ -14,6 +14,9 @@
 		5D51366C24ECC47600A997CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D51366B24ECC47600A997CD /* Preview Assets.xcassets */; };
 		5D51366F24ECC47600A997CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D51366D24ECC47600A997CD /* LaunchScreen.storyboard */; };
 		5D51368424ED111D00A997CD /* GridDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51368324ED111D00A997CD /* GridDisplayView.swift */; };
+		5D741AA824F5F393004FA599 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D741AA724F5F393004FA599 /* OptionsView.swift */; };
+		5D741AAA24F5F9EA004FA599 /* CellShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D741AA924F5F9EA004FA599 /* CellShapeView.swift */; };
+		5D741AAC24F5FE97004FA599 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D741AAB24F5FE97004FA599 /* Shape.swift */; };
 		5D94EEFF24EF7034007805D1 /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D94EEFE24EF7034007805D1 /* RulesView.swift */; };
 		5D94EF0224F09F9A007805D1 /* GenerationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D94EF0124F09F9A007805D1 /* GenerationController.swift */; };
 		5D94EF0424F0C382007805D1 /* CAGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D94EF0324F0C382007805D1 /* CAGrid.swift */; };
@@ -31,6 +34,9 @@
 		5D51366E24ECC47600A997CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D51367024ECC47600A997CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D51368324ED111D00A997CD /* GridDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridDisplayView.swift; sourceTree = "<group>"; };
+		5D741AA724F5F393004FA599 /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
+		5D741AA924F5F9EA004FA599 /* CellShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellShapeView.swift; sourceTree = "<group>"; };
+		5D741AAB24F5FE97004FA599 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		5D94EEFE24EF7034007805D1 /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
 		5D94EF0124F09F9A007805D1 /* GenerationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationController.swift; sourceTree = "<group>"; };
 		5D94EF0324F0C382007805D1 /* CAGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGrid.swift; sourceTree = "<group>"; };
@@ -105,6 +111,8 @@
 				5D51368324ED111D00A997CD /* GridDisplayView.swift */,
 				5D94EF0524F0CE94007805D1 /* GridView.swift */,
 				5D94EEFE24EF7034007805D1 /* RulesView.swift */,
+				5D741AA724F5F393004FA599 /* OptionsView.swift */,
+				5D741AA924F5F9EA004FA599 /* CellShapeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -113,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				5D94EF0324F0C382007805D1 /* CAGrid.swift */,
+				5D741AAB24F5FE97004FA599 /* Shape.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,8 +208,11 @@
 				5D94EF0224F09F9A007805D1 /* GenerationController.swift in Sources */,
 				5D51366324ECC47400A997CD /* AppDelegate.swift in Sources */,
 				5D94EF0624F0CE94007805D1 /* GridView.swift in Sources */,
+				5D741AA824F5F393004FA599 /* OptionsView.swift in Sources */,
 				5D51366524ECC47400A997CD /* SceneDelegate.swift in Sources */,
+				5D741AAA24F5F9EA004FA599 /* CellShapeView.swift in Sources */,
 				5D94EEFF24EF7034007805D1 /* RulesView.swift in Sources */,
+				5D741AAC24F5FE97004FA599 /* Shape.swift in Sources */,
 				5D94EF0424F0C382007805D1 /* CAGrid.swift in Sources */,
 				5D51366724ECC47400A997CD /* ContentView.swift in Sources */,
 				5D51368424ED111D00A997CD /* GridDisplayView.swift in Sources */,
