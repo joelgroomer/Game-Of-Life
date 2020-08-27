@@ -38,9 +38,14 @@ class CAGrid: ObservableObject {
         buffer = Array(repeating: false, count: dim * dim)
     }
     
-    func setCell(index: Int, value: Bool) {
+    func setCell(index: Int, value: Bool?) {
+        // sets the cell to `value` if provided, or toggles if not
         guard index < grid.count else { return }
-        grid[index] = value
+        if let value = value {
+            grid[index] = value            
+        } else {
+            grid[index].toggle()
+        }
         self.objectWillChange.send()
     }
     

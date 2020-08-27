@@ -16,7 +16,7 @@ struct CellView: View {
     var body: some View {
         let tap = TapGesture(count: 1)
             .onEnded { _ in
-                cagrid.setCell(index: index, value: true)
+                cagrid.setCell(index: index, value: nil)
                 $alive.wrappedValue.toggle()
             }
 
