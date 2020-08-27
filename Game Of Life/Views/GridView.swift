@@ -10,13 +10,13 @@ import SwiftUI
 
 struct GridView: View {
     @State private var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 25)
-    @EnvironmentObject private var cagrid: CAGrid
+    @EnvironmentObject private var cagridController: CAGridController
     
     var body: some View {
             
         LazyVGrid(columns: columns) {
-            ForEach(0..<cagrid.dim * cagrid.dim, id: \.self) { i in
-                CellView(alive: cagrid.grid[i], index: i)
+            ForEach(0..<cagridController.cagrid.dim * cagridController.cagrid.dim, id: \.self) { i in
+                CellView(alive: cagridController.cagrid.grid[i], index: i)
                     .padding(0)
             }
         }

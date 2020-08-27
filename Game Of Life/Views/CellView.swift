@@ -9,25 +9,25 @@
 import SwiftUI
 
 struct CellView: View {
-    @EnvironmentObject var cagrid: CAGrid
+    @EnvironmentObject var cagridController: CAGridController
     @State var alive: Bool
     @State var index: Int
     
     var body: some View {
         let tap = TapGesture(count: 1)
             .onEnded { _ in
-                cagrid.setCell(index: index, value: nil)
+                cagridController.cagrid.setCell(index: index, value: nil)
                 $alive.wrappedValue.toggle()
             }
 
-        if cagrid.shapeType == .system {
-            Image(systemName: cagrid.grid[index] ? cagrid.alive : cagrid.dead)
+        if cagridController.shapeType == .system {
+            Image(systemName: cagridController.cagrid.grid[index] ? cagridController.alive : cagridController.dead)
                 .gesture(tap)
-        } else if cagrid.shapeType == .asset {
-            Image(cagrid.grid[index] ? cagrid.alive : cagrid.dead)
+        } else if cagridController.shapeType == .asset {
+            Image(cagridController.cagrid.grid[index] ? cagridController.alive : cagridController.dead)
                 .gesture(tap)
         } else {
-            Text(cagrid.grid[index] ? cagrid.alive : cagrid.dead)
+            Text(cagridController.cagrid.grid[index] ? cagridController.alive : cagridController.dead)
         }
     }
 }

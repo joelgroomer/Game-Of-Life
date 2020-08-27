@@ -12,9 +12,6 @@ class CAGrid: ObservableObject {
     @Published var dim: Int
     @Published var grid: [Bool]
     var buffer: [Bool]
-    var alive = "square.fill"
-    var dead = "square"
-    var shapeType = ShapeType.system
     let center = NotificationCenter.default
     
     init(dim: Int) {
@@ -47,6 +44,7 @@ class CAGrid: ObservableObject {
             grid[index].toggle()
         }
         self.objectWillChange.send()
+        center.post(Notification(name: (NSString("gridupdate")) as Notification.Name))
     }
     
     func prepNextGen(completion: @escaping () -> Void) {

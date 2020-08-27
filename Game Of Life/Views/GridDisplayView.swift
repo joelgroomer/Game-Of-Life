@@ -10,7 +10,7 @@ import SwiftUI
 
 struct GridDisplayView: View {
     @EnvironmentObject private var gen: GenerationController
-    @EnvironmentObject private var cagrid: CAGrid
+    @EnvironmentObject private var cagridController: CAGridController
 //    @State private var offsetX: CGFloat = .zero
 //    @State private var offsetY: CGFloat = .zero
     
@@ -40,12 +40,12 @@ struct GridDisplayView: View {
                     .foregroundColor(.blue)
                     .onTapGesture {
                         gen.reset()
-                        cagrid.reset()
+                        cagridController.cagrid.reset()
                     }
                     .font(.title)
                 VStack {
                     Text("Generation: \(gen.generation)")
-                    Text("Grid size: \(cagrid.dim) x \(cagrid.dim)")
+                    Text("Grid size: \(cagridController.cagrid.dim) x \(cagridController.cagrid.dim)")
                 }
                 .padding()
                 Image(systemName: gen.running ? "stop.fill" : "play.fill")
