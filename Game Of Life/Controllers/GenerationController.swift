@@ -22,9 +22,12 @@ class GenerationController: ObservableObject {
     }}
     
     var speed: TimeInterval = 1.0 { didSet {
+        print("received new interval: \(speed)")
         if running == true {
+            print("invalidating timer...")
             timer?.invalidate()
             timer = Timer.scheduledTimer(timeInterval: speed, target: self, selector: #selector(pinged), userInfo: nil, repeats: true)
+            print("new timer started with interval of \(speed)")
         }
     }}
     

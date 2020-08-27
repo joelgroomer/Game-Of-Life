@@ -15,13 +15,7 @@ struct GridDisplayView: View {
 //    @State private var offsetY: CGFloat = .zero
     
     @State private var scale: CGFloat = 0.5
-    @State private var speed: TimeInterval = 0.5 { didSet {
-        if speed > 0 {
-            gen.speed = 0.5 / speed
-        } else {
-            gen.speed = 5.0
-        }
-    }}
+    @State private var speed: TimeInterval = 0.5
     
     var body: some View {
         VStack {
@@ -65,7 +59,21 @@ struct GridDisplayView: View {
             HStack {
                 
                 Image(systemName: "tortoise")
-                Slider(value: $speed)
+                Slider(value: Binding(
+                        get: {
+                            speed
+                        },
+                        set: { newValue in
+                            speed = newValue
+                            if speed > 0 {
+                                gen.speed = 0.5 / speed
+                                print("set speed to \(speed)")
+                            } else {
+                                gen.speed = 5.0
+                                print("set speed to \(speed)")
+                            }
+                        }
+                ))
                 Image(systemName: "hare")
                 
             }
