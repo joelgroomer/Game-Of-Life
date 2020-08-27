@@ -65,11 +65,13 @@ struct GridDisplayView: View {
                         },
                         set: { newValue in
                             speed = newValue
-                            if speed > 0 {
+                            if speed > 0.1 {
                                 gen.speed = 0.5 / speed
                                 print("set speed to \(speed)")
+                            } else if speed > 0.0 {
+                                gen.speed = 6 + speed * -10
                             } else {
-                                gen.speed = 5.0
+                                gen.speed = 6.0
                                 print("set speed to \(speed)")
                             }
                         }
