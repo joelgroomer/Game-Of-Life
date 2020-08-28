@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct CellView: View {
+    @EnvironmentObject var gen: GenerationController
     @EnvironmentObject var cagridController: CAGridController
     @State var alive: Bool
     @State var index: Int
@@ -16,8 +17,10 @@ struct CellView: View {
     var body: some View {
         let tap = TapGesture(count: 1)
             .onEnded { _ in
-                cagridController.cagrid.setCell(index: index, value: nil)
-                $alive.wrappedValue.toggle()
+                if !gen.running {
+                    cagridController.cagrid.setCell(index: index, value: nil)
+                    $alive.wrappedValue.toggle()
+                }
             }
 
         if index < cagridController.cagrid.grid.count {
