@@ -20,7 +20,7 @@ class BigCrossGrid: CAGrid {
         
         // even dims create a double-wide cross
         let offset = dim % 2 == 0 ? 1 : 0
-        let half = dim / 2 - 1
+        let half = dim / 2
         
         for i in 0..<dim {
             for j in 0..<dim {

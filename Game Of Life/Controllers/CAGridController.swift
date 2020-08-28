@@ -13,11 +13,31 @@ class CAGridController: ObservableObject {
     @Published var alive = "square.fill"
     @Published var dead = "square"
     @Published var shapeType = ShapeType.system
-    let center = NotificationCenter.default
+    @Published var presets = ["Empty", "Big X", "Big Cross"]
+    private var selectedPreset: Int = 0
+    var dim: Int = 25 { didSet { changeGridSize() }}
+    private let center = NotificationCenter.default
     
     init() {
         center.addObserver(forName: Notification.Name(rawValue: "gridupdate"), object: nil, queue: .main) { _ in
             self.objectWillChange.send()
         }
+    }
+    
+    func changeGrid(presetIndex index: Int) {
+        switch index {
+        case 1:
+            cagrid = BigXGrid(dim: dim)
+        case 2:
+            cagrid = BigCrossGrid(dim: dim)
+        default:
+            cagrid = CAGrid(dim: dim)
+        }
+        selectedPreset = index
+        self.objectWillChange.send()
+    }
+    
+    func changeGridSize() {
+        changeGrid(presetIndex: selectedPreset)
     }
 }

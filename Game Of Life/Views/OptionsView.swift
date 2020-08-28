@@ -24,23 +24,25 @@ struct OptionsView: View {
             VStack(alignment: .leading) {
                 Text("Cell shapes:")
                     .font(.title2)
-                HStack {
-                    ForEach(0..<shapes.count) { shape in
-                        CellShapeView(shape: $shapes[shape])
-                            .onTapGesture {
-                                for i in 0..<shapes.count {
-                                    shapes[i].selected = false
+                ScrollView(.horizontal, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/) {
+                    HStack {
+                        ForEach(0..<shapes.count) { shape in
+                            CellShapeView(shape: $shapes[shape])
+                                .onTapGesture {
+                                    for i in 0..<shapes.count {
+                                        shapes[i].selected = false
+                                    }
+                                    shapes[shape].selected = true
+                                    cagridController.alive = shapes[shape].onName
+                                    cagridController.dead = shapes[shape].offName
+                                    cagridController.shapeType = shapes[shape].type
                                 }
-                                shapes[shape].selected = true
-                                cagridController.alive = shapes[shape].onName
-                                cagridController.dead = shapes[shape].offName
-                                cagridController.shapeType = shapes[shape].type
-                            }
+                        }
                     }
                 }
-                Text("Starting board:")
+                Text("Initial boards:")
                     .font(.title2)
-                
+                PresetView()
             }
         }
     }
