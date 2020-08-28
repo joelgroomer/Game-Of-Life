@@ -12,8 +12,6 @@ class CAGrid: ObservableObject {
     @Published var dim: Int
     @Published var grid: [Bool]
     var buffer: [Bool]
-    let alive = "square.fill"
-    let dead = "square"
     let center = NotificationCenter.default
     
     init(dim: Int) {
@@ -35,12 +33,19 @@ class CAGrid: ObservableObject {
     func reset() {
         grid = Array(repeating: false, count: dim * dim)
         buffer = Array(repeating: false, count: dim * dim)
+        center.post(Notification(name: (NSString("gridupdate")) as Notification.Name))
     }
     
-    func setCell(index: Int, value: Bool) {
+    func setCell(index: Int, value: Bool?) {
+        // sets the cell to `value` if provided, or toggles if not
         guard index < grid.count else { return }
-        grid[index] = value
+        if let value = value {
+            grid[index] = value            
+        } else {
+            grid[index].toggle()
+        }
         self.objectWillChange.send()
+        center.post(Notification(name: (NSString("gridupdate")) as Notification.Name))
     }
     
     func prepNextGen(completion: @escaping () -> Void) {
@@ -77,6 +82,7 @@ class CAGrid: ObservableObject {
         DispatchQueue.main.async { [self] in
             grid = buffer
             buffer = Array(repeating: false, count: dim * dim)
+            center.post(Notification(name: (NSString("gridupdate")) as Notification.Name))
         }
     }
 }

@@ -10,18 +10,12 @@ import SwiftUI
 
 struct GridDisplayView: View {
     @EnvironmentObject private var gen: GenerationController
-    @EnvironmentObject private var cagrid: CAGrid
+    @EnvironmentObject private var cagridController: CAGridController
 //    @State private var offsetX: CGFloat = .zero
 //    @State private var offsetY: CGFloat = .zero
     
     @State private var scale: CGFloat = 0.5
-    @State private var speed: TimeInterval = 0.5 { didSet {
-        if speed > 0 {
-            gen.speed = 0.5 / speed
-        } else {
-            gen.speed = 5.0
-        }
-    }}
+    @State private var speed: TimeInterval = 0.5
     
     var body: some View {
         VStack {
@@ -46,12 +40,12 @@ struct GridDisplayView: View {
                     .foregroundColor(.blue)
                     .onTapGesture {
                         gen.reset()
-                        cagrid.reset()
+                        cagridController.cagrid.reset()
                     }
                     .font(.title)
                 VStack {
                     Text("Generation: \(gen.generation)")
-                    Text("Grid size: \(cagrid.dim) x \(cagrid.dim)")
+                    Text("Grid size: \(cagridController.cagrid.dim) x \(cagridController.cagrid.dim)")
                 }
                 .padding()
                 Image(systemName: gen.running ? "stop.fill" : "play.fill")
@@ -65,7 +59,23 @@ struct GridDisplayView: View {
             HStack {
                 
                 Image(systemName: "tortoise")
-                Slider(value: $speed)
+                Slider(value: Binding(
+                        get: {
+                            speed
+                        },
+                        set: { newValue in
+                            speed = newValue
+                            if speed > 0.1 {
+                                gen.speed = 0.5 / speed
+                                print("set speed to \(speed)")
+                            } else if speed > 0.0 {
+                                gen.speed = 6 + speed * -10
+                            } else {
+                                gen.speed = 6.0
+                                print("set speed to \(speed)")
+                            }
+                        }
+                ))
                 Image(systemName: "hare")
                 
             }
