@@ -33,6 +33,7 @@ class CAGrid: ObservableObject {
     func reset() {
         grid = Array(repeating: false, count: dim * dim)
         buffer = Array(repeating: false, count: dim * dim)
+        center.post(Notification(name: (NSString("gridupdate")) as Notification.Name))
     }
     
     func setCell(index: Int, value: Bool?) {
@@ -81,6 +82,7 @@ class CAGrid: ObservableObject {
         DispatchQueue.main.async { [self] in
             grid = buffer
             buffer = Array(repeating: false, count: dim * dim)
+            center.post(Notification(name: (NSString("gridupdate")) as Notification.Name))
         }
     }
 }

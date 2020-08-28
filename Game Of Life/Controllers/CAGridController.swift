@@ -15,7 +15,7 @@ class CAGridController: ObservableObject {
     @Published var shapeType = ShapeType.system
     @Published var presets = ["Empty", "Big X", "Big Cross"]
     private var selectedPreset: Int = 0
-    var dim: Int = 25 { didSet { changeGridSize() }}
+    private(set) var dim: Int = 25
     private let center = NotificationCenter.default
     
     init() {
@@ -35,9 +35,11 @@ class CAGridController: ObservableObject {
         }
         selectedPreset = index
         self.objectWillChange.send()
+        
     }
     
-    func changeGridSize() {
+    func changeGridSize(dim: Int) {
+        self.dim = dim
         changeGrid(presetIndex: selectedPreset)
     }
 }

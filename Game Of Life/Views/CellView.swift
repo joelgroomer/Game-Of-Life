@@ -20,14 +20,16 @@ struct CellView: View {
                 $alive.wrappedValue.toggle()
             }
 
-        if cagridController.shapeType == .system {
-            Image(systemName: cagridController.cagrid.grid[index] ? cagridController.alive : cagridController.dead)
-                .gesture(tap)
-        } else if cagridController.shapeType == .asset {
-            Image(cagridController.cagrid.grid[index] ? cagridController.alive : cagridController.dead)
-                .gesture(tap)
-        } else {
-            Text(cagridController.cagrid.grid[index] ? cagridController.alive : cagridController.dead)
+        if index < cagridController.cagrid.grid.count {
+            if cagridController.shapeType == .system {
+                Image(systemName: cagridController.cagrid.grid[index] ? cagridController.alive : cagridController.dead)
+                    .gesture(tap)
+            } else if cagridController.shapeType == .asset {
+                Image(cagridController.cagrid.grid[index] ? cagridController.alive : cagridController.dead)
+                    .gesture(tap)
+            } else {
+                Text(cagridController.cagrid.grid[index] ? cagridController.alive : cagridController.dead)
+            }
         }
     }
 }

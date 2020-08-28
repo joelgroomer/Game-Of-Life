@@ -26,5 +26,6 @@ class BigXGrid: CAGrid {
                 }
             }
         }
+        center.post(Notification(name: (NSString("gridupdate")) as Notification.Name))
     }
 }

@@ -43,6 +43,9 @@ struct OptionsView: View {
                 Text("Initial boards:")
                     .font(.title2)
                 PresetView()
+                Text("Grid size:")
+                    .font(.title2)
+                SizeView()
             }
         }
     }

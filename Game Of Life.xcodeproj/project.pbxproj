@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D0429B224F89F5100906614 /* SizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0429B124F89F5100906614 /* SizeView.swift */; };
 		5D51366324ECC47400A997CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51366224ECC47400A997CD /* AppDelegate.swift */; };
 		5D51366524ECC47400A997CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51366424ECC47400A997CD /* SceneDelegate.swift */; };
 		5D51366724ECC47400A997CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51366624ECC47400A997CD /* ContentView.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D0429B124F89F5100906614 /* SizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeView.swift; sourceTree = "<group>"; };
 		5D51365F24ECC47400A997CD /* Game Of Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game Of Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D51366224ECC47400A997CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D51366424ECC47400A997CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,14 +116,9 @@
 		5D51367724ECC56200A997CD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5D94EF0924F0D08E007805D1 /* CellView.swift */,
 				5D51366624ECC47400A997CD /* ContentView.swift */,
-				5D51368324ED111D00A997CD /* GridDisplayView.swift */,
-				5D94EF0524F0CE94007805D1 /* GridView.swift */,
-				5D94EEFE24EF7034007805D1 /* RulesView.swift */,
-				5D741AA724F5F393004FA599 /* OptionsView.swift */,
-				5D741AA924F5F9EA004FA599 /* CellShapeView.swift */,
-				5D692D9724F766D700A0075D /* PresetView.swift */,
+				5D7583DF24F8C64D0097FCD0 /* Grid */,
+				5D7583E024F8C6710097FCD0 /* Sidebar */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -135,6 +132,28 @@
 				5D692D9B24F76A1D00A0075D /* BigCrossGrid.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5D7583DF24F8C64D0097FCD0 /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				5D94EF0924F0D08E007805D1 /* CellView.swift */,
+				5D51368324ED111D00A997CD /* GridDisplayView.swift */,
+				5D94EF0524F0CE94007805D1 /* GridView.swift */,
+			);
+			name = Grid;
+			sourceTree = "<group>";
+		};
+		5D7583E024F8C6710097FCD0 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				5D741AA924F5F9EA004FA599 /* CellShapeView.swift */,
+				5D741AA724F5F393004FA599 /* OptionsView.swift */,
+				5D692D9724F766D700A0075D /* PresetView.swift */,
+				5D94EEFE24EF7034007805D1 /* RulesView.swift */,
+				5D0429B124F89F5100906614 /* SizeView.swift */,
+			);
+			name = Sidebar;
 			sourceTree = "<group>";
 		};
 		5D94EF0024F09F66007805D1 /* Controllers */ = {
@@ -222,6 +241,7 @@
 				5D94EF0624F0CE94007805D1 /* GridView.swift in Sources */,
 				5D692D9C24F76A1D00A0075D /* BigCrossGrid.swift in Sources */,
 				5D741AA824F5F393004FA599 /* OptionsView.swift in Sources */,
+				5D0429B224F89F5100906614 /* SizeView.swift in Sources */,
 				5D51366524ECC47400A997CD /* SceneDelegate.swift in Sources */,
 				5D741AAA24F5F9EA004FA599 /* CellShapeView.swift in Sources */,
 				5D94EEFF24EF7034007805D1 /* RulesView.swift in Sources */,
