@@ -11,7 +11,6 @@ import Foundation
 class BigCrossGrid: CAGrid {
     override init(dim: Int) {
         super.init(dim: dim)
-        
         reset()
     }
     
