@@ -48,4 +48,8 @@ class GenerationController: ObservableObject {
         generation = 0
     }
 
+    func step() {
+        if running { return }
+        pinged()
+    }
 }
