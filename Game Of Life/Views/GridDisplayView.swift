@@ -43,11 +43,19 @@ struct GridDisplayView: View {
                         cagridController.cagrid.reset()
                     }
                     .font(.title)
+                    .padding(.trailing)
                 VStack {
                     Text("Generation: \(gen.generation)")
                     Text("Grid size: \(cagridController.cagrid.dim) x \(cagridController.cagrid.dim)")
                 }
                 .padding()
+                Image(systemName: "forward.end.fill")
+                    .foregroundColor(gen.running ? .gray : .blue)
+                    .onTapGesture {
+                        gen.step()
+                    }
+                    .font(.title)
+                    .padding([.leading, .trailing])
                 Image(systemName: gen.running ? "stop.fill" : "play.fill")
                     .foregroundColor(.blue)
                     .onTapGesture {
