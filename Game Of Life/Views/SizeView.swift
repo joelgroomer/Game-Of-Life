@@ -17,11 +17,14 @@ struct SizeView: View {
         Picker("Grid Size", selection: $dim) {
             ForEach(10..<51) {
                 Text("\($0 - 10) x \($0 - 10)")
+                    .foregroundColor(.black)
             }
         }.onChange(of: dim, perform: { value in
             gen.reset()
             cagridController.changeGridSize(dim: value)
         })
+        .background(Color(.white).opacity(0.2))
+        .cornerRadius(10.0)
     }
 }
 

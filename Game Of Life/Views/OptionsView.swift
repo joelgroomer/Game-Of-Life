@@ -48,6 +48,7 @@ struct OptionsView: View {
                 SizeView()
             }
         }
+        .padding()
     }
 }
 
