@@ -13,7 +13,10 @@ struct GridView: View {
     
     var body: some View {
         
-        LazyVGrid(columns: Array(repeating: GridItem.init(.flexible()), count: cagridController.dim)) {
+        LazyVGrid(columns: Array(repeating: GridItem.init(
+                                    .flexible(minimum: cagridController.shapeType.rawValue,
+                                              maximum: 30)),
+                                 count: cagridController.dim)) {
             ForEach(0..<cagridController.cagrid.grid.count, id: \.self) { i in
                 CellView(alive: cagridController.cagrid.grid[i], index: i)
                     .padding(0)

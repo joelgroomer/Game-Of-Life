@@ -25,27 +25,31 @@ class CAGridController: ObservableObject {
     }
     
     func changeGrid(presetIndex index: Int) {
-        switch index {
-        case 1:
-            cagrid = BigXGrid(dim: dim)
-        case 2:
-            cagrid = BigCrossGrid(dim: dim)
-        case 3:
-            cagrid = GliderGrid(dim: dim)
-        case 4:
-            cagrid = LightweightSpaceshipGrid(dim: dim)
-        case 5:
-            cagrid = RandomGrid(dim: dim)
-        case 6:
-            cagrid = Random20Grid(dim: dim)
-        case 7:
-            cagrid = Random30Grid(dim: dim)
-        default:
-            // "Empty" grid (index 0)
-            cagrid = CAGrid(dim: dim)
+        DispatchQueue.global().async { [self] in
+            switch index {
+            case 1:
+                cagrid = BigXGrid(dim: dim)
+            case 2:
+                cagrid = BigCrossGrid(dim: dim)
+            case 3:
+                cagrid = GliderGrid(dim: dim)
+            case 4:
+                cagrid = LightweightSpaceshipGrid(dim: dim)
+            case 5:
+                cagrid = RandomGrid(dim: dim)
+            case 6:
+                cagrid = Random20Grid(dim: dim)
+            case 7:
+                cagrid = Random30Grid(dim: dim)
+            default:
+                // "Empty" grid (index 0)
+                cagrid = CAGrid(dim: dim)
+            }
+            selectedPreset = index
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
         }
-        selectedPreset = index
-        self.objectWillChange.send()
         
     }
     
