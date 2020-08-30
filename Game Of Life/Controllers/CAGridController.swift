@@ -45,8 +45,8 @@ class CAGridController: ObservableObject {
             cagrid = CAGrid(dim: dim)
         }
         selectedPreset = index
+    
         self.objectWillChange.send()
-        
     }
     
     func changeGridSize(dim: Int) {

@@ -32,6 +32,9 @@ struct CellView: View {
                     .gesture(tap)
             } else {
                 Text(cagridController.cagrid.grid[index] ? cagridController.alive : cagridController.dead)
+                    .font(.caption)
+                    .frame(width: 20, height: 25, alignment: .center)
+                    .gesture(tap)
             }
         }
     }

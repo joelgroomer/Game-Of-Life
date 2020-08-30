@@ -27,13 +27,23 @@ struct GridDisplayView: View {
             .padding()
             
             ScrollView([.horizontal, .vertical], showsIndicators: true) {
-                GridView()
-                .scaleEffect(scale * 2)
-                .highPriorityGesture(
-                    MagnificationGesture()
-                        .onChanged { value  in
-                            scale = value.magnitude
-                        })
+                if cagridController.shapeType == .system {
+                    GridView()
+                    .scaleEffect(scale * 2)
+                    .highPriorityGesture(
+                        MagnificationGesture()
+                            .onChanged { value  in
+                                scale = value.magnitude
+                            })
+                } else if cagridController.shapeType == .emoji {
+                    EmojiGridView()
+                    .scaleEffect(scale * 2)
+                    .highPriorityGesture(
+                        MagnificationGesture()
+                            .onChanged { value  in
+                                scale = value.magnitude
+                            })
+                }
             }
             HStack {
                 Image(systemName: "xmark.circle")

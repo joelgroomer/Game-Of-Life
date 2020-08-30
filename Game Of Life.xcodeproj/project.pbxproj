@@ -32,6 +32,7 @@
 		5DA34A7924F9D98600253D8F /* Random20Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA34A7824F9D98600253D8F /* Random20Grid.swift */; };
 		5DA34A7B24F9DA5500253D8F /* Random30Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA34A7A24F9DA5500253D8F /* Random30Grid.swift */; };
 		5DA34A7D24F9DCAF00253D8F /* LightweightSpaceshipGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA34A7C24F9DCAF00253D8F /* LightweightSpaceshipGrid.swift */; };
+		5DA34A7F24FB465300253D8F /* EmojiGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA34A7E24FB465300253D8F /* EmojiGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		5DA34A7824F9D98600253D8F /* Random20Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random20Grid.swift; sourceTree = "<group>"; };
 		5DA34A7A24F9DA5500253D8F /* Random30Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random30Grid.swift; sourceTree = "<group>"; };
 		5DA34A7C24F9DCAF00253D8F /* LightweightSpaceshipGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightweightSpaceshipGrid.swift; sourceTree = "<group>"; };
+		5DA34A7E24FB465300253D8F /* EmojiGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,14 +138,7 @@
 		5D51367824ECCC1C00A997CD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5D692D9924F7672200A0075D /* BigXGrid.swift */,
-				5D692D9B24F76A1D00A0075D /* BigCrossGrid.swift */,
-				5D94EF0324F0C382007805D1 /* CAGrid.swift */,
-				5DA34A7424F9D49400253D8F /* GliderGrid.swift */,
-				5DA34A7C24F9DCAF00253D8F /* LightweightSpaceshipGrid.swift */,
-				5DA34A7624F9D84400253D8F /* RandomGrid.swift */,
-				5DA34A7824F9D98600253D8F /* Random20Grid.swift */,
-				5DA34A7A24F9DA5500253D8F /* Random30Grid.swift */,
+				5DA34A8024FB4E4700253D8F /* Grids */,
 				5D741AAB24F5FE97004FA599 /* Shape.swift */,
 			);
 			path = Models;
@@ -155,6 +150,7 @@
 				5D94EF0924F0D08E007805D1 /* CellView.swift */,
 				5D51368324ED111D00A997CD /* GridDisplayView.swift */,
 				5D94EF0524F0CE94007805D1 /* GridView.swift */,
+				5DA34A7E24FB465300253D8F /* EmojiGridView.swift */,
 			);
 			name = Grid;
 			sourceTree = "<group>";
@@ -178,6 +174,21 @@
 				5D94EF0124F09F9A007805D1 /* GenerationController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5DA34A8024FB4E4700253D8F /* Grids */ = {
+			isa = PBXGroup;
+			children = (
+				5D692D9924F7672200A0075D /* BigXGrid.swift */,
+				5D692D9B24F76A1D00A0075D /* BigCrossGrid.swift */,
+				5D94EF0324F0C382007805D1 /* CAGrid.swift */,
+				5DA34A7424F9D49400253D8F /* GliderGrid.swift */,
+				5DA34A7C24F9DCAF00253D8F /* LightweightSpaceshipGrid.swift */,
+				5DA34A7624F9D84400253D8F /* RandomGrid.swift */,
+				5DA34A7824F9D98600253D8F /* Random20Grid.swift */,
+				5DA34A7A24F9DA5500253D8F /* Random30Grid.swift */,
+			);
+			name = Grids;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +268,7 @@
 				5D51366324ECC47400A997CD /* AppDelegate.swift in Sources */,
 				5D94EF0624F0CE94007805D1 /* GridView.swift in Sources */,
 				5D692D9C24F76A1D00A0075D /* BigCrossGrid.swift in Sources */,
+				5DA34A7F24FB465300253D8F /* EmojiGridView.swift in Sources */,
 				5DA34A7524F9D49400253D8F /* GliderGrid.swift in Sources */,
 				5D741AA824F5F393004FA599 /* OptionsView.swift in Sources */,
 				5D0429B224F89F5100906614 /* SizeView.swift in Sources */,

@@ -23,6 +23,7 @@ struct PresetView: View {
         Picker("Preset", selection: $selectedPreset) {
             ForEach(0..<cagridController.presets.count) {
                 Text(cagridController.presets[$0])
+                    .foregroundColor(.black)
             }
         }
         .onChange(of: selectedPreset, perform: { value in
@@ -30,6 +31,8 @@ struct PresetView: View {
             cagridController.changeGrid(presetIndex: value)
             
         })
+        .background(Color(.white).opacity(0.2))
+        .cornerRadius(10.0)
     }
 }
 

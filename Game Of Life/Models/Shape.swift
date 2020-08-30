@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Shape: Hashable {
     var offName: String
@@ -17,8 +18,8 @@ struct Shape: Hashable {
     
 }
 
-enum ShapeType {
-    case system
-    case asset
-    case emoji
+enum ShapeType: CGFloat {
+    case system = 12.0
+    case asset = 30.0
+    case emoji = 20.0
 }
