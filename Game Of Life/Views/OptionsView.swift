@@ -14,7 +14,10 @@ struct OptionsView: View {
         Shape(offName: "square", onName: "square.fill", selected: true, title: "Square", type: .system),
         Shape(offName: "circle", onName: "circle.fill", selected: false, title: "Circle", type: .system),
         Shape(offName: "moon", onName: "sun.max.fill", selected: false, title: "Night/Day", type: .system),
-        Shape(offName: "🥶", onName: "🥵", selected: false, title: "Hot & Cold", type: .emoji)
+        Shape(offName: "🥶", onName: "🥵", selected: false, title: "Hot & Cold", type: .emoji),
+        Shape(offName: "🥚", onName: "🐥", selected: false, title: "Eggs & Chicks", type: .emoji),
+        Shape(offName: "🌧", onName: "☀️", selected: false, title: "Sun vs Rain", type: .emoji),
+        Shape(offName: "😼", onName: "🐭", selected: false, title: "Cat vs Mouse", type: .emoji)
     ]
     
     var body: some View {

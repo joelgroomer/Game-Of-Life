@@ -34,6 +34,7 @@ struct CellView: View {
                 Text(cagridController.cagrid.grid[index] ? cagridController.alive : cagridController.dead)
                     .font(.caption)
                     .frame(width: 20, height: 25, alignment: .center)
+                    .gesture(tap)
             }
         }
     }
