@@ -56,6 +56,7 @@
       "size" : "29x29"
     },
     {
+      "filename" : "gameOfLife58x58.jpg",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "29x29"
@@ -66,6 +67,7 @@
       "size" : "40x40"
     },
     {
+      "filename" : "gameOfLife80x80.jpg",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "40x40"
@@ -76,11 +78,13 @@
       "size" : "76x76"
     },
     {
+      "filename" : "gameOfLife152x152.jpg",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "76x76"
     },
     {
+      "filename" : "gameOfLife167x167.jpg",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "83.5x83.5"
