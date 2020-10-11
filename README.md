@@ -10,7 +10,7 @@ I was in (I believe) the last part-time iOS track to *not* learn SwiftUI at all,
 * SwiftUI 2 beta
 
 ## Demo
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1SXVRWFnhRI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Please check out the demo video here: https://youtu.be/1SXVRWFnhRI
 
 ## Running the app
 I have submitted the app for review on TestFlight and am awaiting approval. Once it's approved, I'll post a test link here.
