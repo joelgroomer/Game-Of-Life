@@ -9,8 +9,13 @@ I was in (I believe) the last part-time iOS track to *not* learn SwiftUI at all,
 * Swift 5
 * SwiftUI 2 beta
 
+## Demo
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1SXVRWFnhRI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Running the app
-Because I'm using beta software, I was not able to upload this project to Testflight. If you want to run it, you're welcome to clone the repo and build it locally. Once iOS 14 is released, I will put this on Testflight and provide a link here.
+I have submitted the app for review on TestFlight and am awaiting approval. Once it's approved, I'll post a test link here.
+
+You can also clone this repo and run the app in the simulator or on an iPad (you'll have to change the team). I suggest running on a real device because it doesn't look as nice on the simulator for some reason.
 
 ## Screenshots
 ![Initial screen](https://raw.githubusercontent.com/joelgroomer/Game-Of-Life/master/Screenshots/gol-initial-screen.PNG)
