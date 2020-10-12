@@ -13,7 +13,9 @@ I was in (I believe) the last part-time iOS track to *not* learn SwiftUI at all,
 Please check out the demo video here: https://youtu.be/1SXVRWFnhRI
 
 ## Running the app
-I have submitted the app for review on TestFlight and am awaiting approval. Once it's approved, I'll post a test link here.
+You can run this app through TestFlight: https://testflight.apple.com/join/Ubfi6E8s
+
+Note this app only runs on iPad.
 
 You can also clone this repo and run the app in the simulator or on an iPad (you'll have to change the team). I suggest running on a real device because it doesn't look as nice on the simulator for some reason.
 
